@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+body {
+  background: #0f1a24;
+  color: white;
+}
+
+.grey {
+  background-color: #293642;
+}
+
+.btn {
+  background-color: #789cba;
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 35px;
+}
