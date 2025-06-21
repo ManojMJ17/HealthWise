@@ -1,9 +1,19 @@
 import { Globe, Search, UserRound } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-const Navbar = ({ links }) => {
+const Navbar = () => {
+  const navbarProps = {
+    links: [
+      { label: "Home", href: "/home" },
+      { label: "Remedies", href: "/remedies" },
+      { label: "Chat with AI", href: "/chat-with-ai" },
+      { label: "About", href: "/about" },
+    ],
+  };
+
   const location = useLocation();
 
   const isAuthPage = ["/register", "/login"].includes(location.pathname);
+
   return (
     <>
       <div className="mx-10 my-5 flex gap-10 justify-between items-center">
@@ -14,20 +24,16 @@ const Navbar = ({ links }) => {
           {!isAuthPage && (
             <div>
               <ul className="flex gap-6">
-                {links && links.length > 0 ? (
-                  links.map((link, index) => (
-                    <li key={index} style={{ margin: "0 10px" }}>
-                      <a
-                        href={link.href}
-                        style={{ color: "#fff", textDecoration: "none" }}
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))
-                ) : (
-                  <li style={{ margin: "0 10px", color: "#aaa" }}></li>
-                )}
+                {navbarProps.links.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      to={link.href}
+                      className="text-white text-[16px] hover:underline"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           )}

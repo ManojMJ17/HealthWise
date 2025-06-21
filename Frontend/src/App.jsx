@@ -13,6 +13,9 @@ import Environment from "./FeaturePages/Environment";
 import MentalEmotionalStep from "./FeaturePages/MentalEmotional";
 import ExistingConditions from "./FeaturePages/ExsitingCondition";
 import RCAResult from "./FeaturePages/RCAResult";
+import WellnessTips from "./FeaturePages/WellnessTips";
+import SeasonalPrecautions from "./FeaturePages/SeasonalPrecautions";
+import Remedies from "./FeaturePages/Remedies";
 
 const App = () => {
   return (
@@ -41,6 +44,12 @@ const App = () => {
               element={<ExistingConditions />}
             />
             <Route path="/rca-result" element={<RCAResult />} />
+            <Route path="/wellness-tips" element={<WellnessTips />} />
+            <Route
+              path="/seasonal-precautions"
+              element={<SeasonalPrecautions />}
+            />
+            <Route path="/remedies" element={<Remedies />} />
           </Routes>
         </Router>
       </div>

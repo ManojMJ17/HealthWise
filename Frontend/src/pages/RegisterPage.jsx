@@ -5,7 +5,6 @@ import { API_URL } from "../../api/AppPath";
 import toast from "react-hot-toast";
 
 const RegisterPage = () => {
-  
   const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
@@ -127,15 +126,9 @@ const RegisterPage = () => {
               <option value="" disabled>
                 Select Gender
               </option>
-              <option value="male" className="text-black">
-                Male
-              </option>
-              <option value="female" className="text-black">
-                Female
-              </option>
-              <option value="Other" className="text-black">
-                Other
-              </option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <div className="flex flex-col gap-2">
