@@ -4,10 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { PiTreePalm } from "react-icons/pi";
 import { TbYinYang } from "react-icons/tb";
 import { VscSettings } from "react-icons/vsc";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
->>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
 import {
   MdHealthAndSafety,
   MdHistory,
@@ -31,7 +28,6 @@ const Dashboard = () => {
       icon: PiTreePalm,
       href: "/seasonal-precautions",
     },
-<<<<<<< HEAD
     { name: "Ayurvedic Dosha", icon: TbYinYang, href: "/ayurvedic-dosha" },
     // { name: "Health Parameters", icon: VscSettings },
     { name: "Explore Remedies", icon: MdHealthAndSafety, href: "/remedies" },
@@ -46,14 +42,6 @@ const Dashboard = () => {
       icon: IoIosHelpCircleOutline,
       href: "/help-support",
     },
-=======
-    { name: "Ayurvedic Dosha", icon: TbYinYang },
-    { name: "Health Parameters", icon: VscSettings },
-    { name: "Explore Remedies", icon: MdHealthAndSafety, href: "/remedies" },
-    { name: "Symptom Analysis", icon: MdOutlineKeyboardVoice },
-    { name: "History", icon: MdHistory },
-    { name: "Help/Support", icon: IoIosHelpCircleOutline },
->>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
   ];
 
   return (
