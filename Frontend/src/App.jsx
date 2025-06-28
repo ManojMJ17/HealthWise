@@ -16,6 +16,7 @@ import RCAResult from "./FeaturePages/RCAResult";
 import WellnessTips from "./FeaturePages/WellnessTips";
 import SeasonalPrecautions from "./FeaturePages/SeasonalPrecautions";
 import Remedies from "./FeaturePages/Remedies";
+<<<<<<< HEAD
 import AyurvedicDosha from "./FeaturePages/Ayurvedicdosha";
 import DoshaQuiz from "./FeaturePages/DoshaQuiz";
 import DoshaResult from "./FeaturePages/DoshaResult";
@@ -24,6 +25,8 @@ import HelpSupport from "./FeaturePages/HelpSupport";
 import SymptomAnalyzer from "./FeaturePages/SymptomAnalysis";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
+=======
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
 
 const App = () => {
   return (
@@ -39,9 +42,12 @@ const App = () => {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+<<<<<<< HEAD
             <Route path="/settings" element={<Settings />} />
             <Route path="/about" element={<About />} />
 
+=======
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
             <Route
               path="/root-cause-analysis"
               element={<RootCauseAnalysis />}
@@ -61,12 +67,15 @@ const App = () => {
               element={<SeasonalPrecautions />}
             />
             <Route path="/remedies" element={<Remedies />} />
+<<<<<<< HEAD
             <Route path="/ayurvedic-dosha" element={<AyurvedicDosha />} />
             <Route path="/dosha-quiz" element={<DoshaQuiz />} />
             <Route path="/dosha-result" element={<DoshaResult />} />
             <Route path="/history" element={<History />} />
             <Route path="/symptom-analysis" element={<SymptomAnalyzer />} />
             <Route path="/help-support" element={<HelpSupport />} />
+=======
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
           </Routes>
         </Router>
       </div>

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../api/AppPath";
 import Navbar from "../components/Navbar";
+=======
+import React from "react";
+import { useState } from "react";
+
+import { useEffect } from "react";
+
+import { API_URL } from "../../api/AppPath";
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -30,7 +39,10 @@ const Profile = () => {
           setError(`Failed to fetch user: ${errorText}`);
           return;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
         const data = await response.json();
         setUser(data.user);
       } catch (err) {
@@ -44,6 +56,7 @@ const Profile = () => {
     fetchUser();
   }, []);
 
+<<<<<<< HEAD
   const getProfilePic = (gender) => {
     if (gender === "female") return "/anime-style-female.png";
     if (gender === "male") return "/anime-style-male.png";
@@ -101,6 +114,18 @@ const Profile = () => {
       </div>
     </div>
         </div>
+=======
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>{error}</p>;
+  return (
+    <>
+      <div>
+        <h1>Welcome, {user?.username}!</h1>
+        <p>Email: {user?.email}</p>
+        <p>Country: {user?.country}</p>
+      </div>
+    </>
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
   );
 };
 

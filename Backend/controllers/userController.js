@@ -29,6 +29,10 @@ const userRegister = async (req, res) => {
     }
 
     if (error.code === 11000) {
+<<<<<<< HEAD
+=======
+      // Duplicate key error
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
       return res.status(400).json({ error: "Email already exists" });
     }
 
@@ -82,7 +86,11 @@ const getUserprofile = async (req, res) => {
   try {
     const token = req.headers.authorization.split(" ")[1];
 
+<<<<<<< HEAD
     if (!token) return res.status(401).json({ message: "No token provided" });
+=======
+    if (!token) return res.statu(401).json({ message: "No token provided" });
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
 
     const decoded = jwt.verify(token, process.env.secretKey);
 
@@ -96,7 +104,10 @@ const getUserprofile = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
 module.exports = { userRegister, getAllUser, userLogin, getUserprofile };

@@ -5,7 +5,11 @@ import { PiBowlFood, PiFlowerLotusBold } from "react-icons/pi";
 const SeasonalPrecautions = () => {
   const data = {
     title: "Stay Balanced This Season",
+<<<<<<< HEAD
     season: "Summer(March-May)",
+=======
+    season: "Summer",
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
     sections: [
       {
         title: "Foods to Favor / Avoid",
@@ -68,9 +72,15 @@ const SeasonalPrecautions = () => {
       <div className="mb-8">
         <select className="px-4 py-2 rounded-md border border-gray-600 text-gray-300 bg-gray-800 focus:ring-2 focus:ring-blue-500">
           <option>{data.season}</option>
+<<<<<<< HEAD
           <option>Monsoon(June-September)</option>
           <option>Autumn(October-November)</option>
           <option>winter(December-January)</option>
+=======
+          <option>Winter</option>
+          <option>Spring</option>
+          <option>Autumn</option>
+>>>>>>> 8bb665d42b9a770d95a0cd50af75359e6d893f42
         </select>
       </div>
 
