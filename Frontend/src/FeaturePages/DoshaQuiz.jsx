@@ -66,10 +66,9 @@ const questions = [
   },
 ];
 
-
 const DoshaQuiz = () => {
   const [answers, setAnswers] = useState({});
-   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleChange = (id, value) => {
     setAnswers((prev) => ({
@@ -81,20 +80,30 @@ const DoshaQuiz = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Quiz Answers:", answers);
+    const doshaScores = { Vata: 0, Pitta: 0, Kapha: 0 };
 
-    // You can calculate dosha type here and redirect to result page or show a modal
+    questions.forEach((q) => {
+      const selected = answers[q.id];
+      const idx = q.options.indexOf(selected);
+      const dosha = q.doshas[idx];
+      if (dosha) doshaScores[dosha]++;
+    });
+
+    const dominantDosha = Object.keys(doshaScores).reduce((a, b) =>
+      doshaScores[a] > doshaScores[b] ? a : b
+    );
+
+    localStorage.setItem("dosha_result", dominantDosha);
     navigate("/dosha-result");
-
   };
 
   return (
-    <div><Navbar></Navbar>
-
+    <div>
+      <Navbar />
       <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center px-4">
         <div className="w-full max-w-2xl">
           <h1 className="text-2xl font-semibold mb-4">Discover Your Dosha Type</h1>
-          <p className="mb-6 text-gray-300">Quiz</p>
+          <p className="mb-6 text-gray-300">Please answer the following questions:</p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {questions.map((q) => (

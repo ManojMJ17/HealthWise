@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
+const remedyRoutes = require("./routes/remedyRoutes");
 
 const userRoutes = require("./routes/userRoutes");
 
@@ -25,6 +26,8 @@ app.use("/user", userRoutes);
 app.listen(PORT, (req, res) => {
   console.log(`Server runnning at ${PORT}`);
 });
+
+app.use("/api/remedy", remedyRoutes);
 
 app.use("/", (req, res) => {
   res.send("<h1>Hello World!</h1>");
