@@ -29,12 +29,11 @@ const Dashboard = () => {
       href: "/seasonal-precautions",
     },
     { name: "Ayurvedic Dosha", icon: TbYinYang, href: "/ayurvedic-dosha" },
-    // { name: "Health Parameters", icon: VscSettings },
     { name: "Explore Remedies", icon: MdHealthAndSafety, href: "/remedies" },
     {
       name: "Symptom Analysis",
       icon: MdOutlineKeyboardVoice,
-      href: "/symptom-analysis",
+      href: "/symptom-chatbot", // Updated route
     },
     { name: "History", icon: MdHistory, href: "/history" },
     {
@@ -68,6 +67,8 @@ const Dashboard = () => {
         <div className="ml-20 mr-16 col-span-3">
           <QuickSymptom />
         </div>
+      </div>
+      <div className="mt-4 ml-8">
       </div>
     </>
   );

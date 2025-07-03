@@ -21,9 +21,13 @@ import DoshaQuiz from "./FeaturePages/DoshaQuiz";
 import DoshaResult from "./FeaturePages/DoshaResult";
 import History from "./FeaturePages/History";
 import HelpSupport from "./FeaturePages/HelpSupport";
-import SymptomAnalyzer from "./FeaturePages/SymptomAnalysis";
+import SymptomAnalyzer from "./FeaturePages/SymptomAnalyzer";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
+import AyurvedicSymptomChatbot from "./FeaturePages/SymptomChatbot";
+
+
+
 
 const App = () => {
   return (
@@ -67,8 +71,9 @@ const App = () => {
             <Route path="/dosha-quiz" element={<DoshaQuiz />} />
             <Route path="/dosha-result" element={<DoshaResult />} />
             <Route path="/history" element={<History />} />
-            <Route path="/symptom-analysis" element={<SymptomAnalyzer />} />
+             <Route path="/symptom-analysis" element={<SymptomAnalyzer />} />
             <Route path="/help-support" element={<HelpSupport />} />
+            <Route path="/symptom-chatbot" element={<AyurvedicSymptomChatbot />} />
           </Routes>
         </Router>
       </div>
