@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 app.use("/user", userRoutes);
 app.use("/api/remedy", remedyRoutes);
-app.use("/api", geminiRoutes); // ✅ important
+app.use("/api", geminiRoutes); 
 
 app.get("/", (req, res) => {
   res.send("<h1>Server running!</h1>");

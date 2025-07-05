@@ -7,11 +7,11 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import { Toaster } from "react-hot-toast";
 import RootCauseAnalysis from "./FeaturePages/RootCauseAnalysis";
-import DiagnosisPage from "./FeaturePages/DiagnosisPage";
-import DietHydrationStep from "./FeaturePages/DietHydration";
-import Environment from "./FeaturePages/Environment";
-import MentalEmotionalStep from "./FeaturePages/MentalEmotional";
-import ExistingConditions from "./FeaturePages/ExsitingCondition";
+// import DiagnosisPage from "./FeaturePages/DiagnosisPage";
+// import DietHydrationStep from "./FeaturePages/DietHydration";
+// import Environment from "./FeaturePages/Environment";
+// import MentalEmotionalStep from "./FeaturePages/MentalEmotional";
+// import ExistingConditions from "./FeaturePages/ExsitingCondition";
 import RCAResult from "./FeaturePages/RCAResult";
 import WellnessTips from "./FeaturePages/WellnessTips";
 import SeasonalPrecautions from "./FeaturePages/SeasonalPrecautions";
@@ -25,6 +25,7 @@ import SymptomAnalyzer from "./FeaturePages/SymptomAnalyzer";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 import AyurvedicSymptomChatbot from "./FeaturePages/SymptomChatbot";
+import RootCauseChatbot from "./FeaturePages/RootCauseChatbot";
 
 
 
@@ -47,7 +48,7 @@ const App = () => {
             <Route path="/settings" element={<Settings />} />
             <Route path="/about" element={<About />} />
 
-            <Route
+            {/* <Route
               path="/root-cause-analysis"
               element={<RootCauseAnalysis />}
             />
@@ -58,7 +59,7 @@ const App = () => {
             <Route
               path="/exsiting-condition"
               element={<ExistingConditions />}
-            />
+            /> */}
             <Route path="/rca-result" element={<RCAResult />} />
             <Route path="/wellness-tips" element={<WellnessTips />} />
             <Route
@@ -74,6 +75,7 @@ const App = () => {
              <Route path="/symptom-analysis" element={<SymptomAnalyzer />} />
             <Route path="/help-support" element={<HelpSupport />} />
             <Route path="/symptom-chatbot" element={<AyurvedicSymptomChatbot />} />
+            <Route path="/root-cause-analysis" element={<RootCauseChatbot />} />
           </Routes>
         </Router>
       </div>
